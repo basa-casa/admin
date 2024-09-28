@@ -1,0 +1,6 @@
+label: CMS
+name: CMS
+widget: string
+field_type: string
+hint: URL of javascript CMS imported to <script src="{{ .Params.CMS }}"></script>
+default: https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js

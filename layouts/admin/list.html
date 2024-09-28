@@ -1,0 +1,8 @@
+{{ define "main" }}
+<nav>
+  {{ partial "admin/menu.html" . }}{{ partial "admin/help-menu.html" . }}
+</nav>
+<article id="nc-root">
+</article>        
+{{ partial "admin/getCMS.html" . }}
+{{ end }}

@@ -1,0 +1,26 @@
+<h2 class="text-2xl font-semibold">Available collections</h2>
+        <!-- yml -->
+        {{ with resources.GetMatch "scms/collections/*.yml" }}
+  {{/*  {{ range .Site.Resources.GetMatch "scms/collections/*.yml" }}  */}}
+    {{ .Publish }}
+      {{/*  <tr>
+        <td>{{ .Params.label }}</td>
+        <td>-import: collection {{ .Params.name }}</td>
+        </tr>
+        <tr>
+        <td><a href="{{ .Params.publishedFileUrl }}">Published File</a></td>
+        <td><a href="#" onclick="copyToClipboard('cp _vendor/github/basa-casa/admin/data/scms/collections/{{ .Params.file }}')">Copy from _vendor</a></td>
+      </tr>
+      <tr>
+        <td colspan="4">{{ .Params.description }}</td>
+      </tr>  */}}
+  {{ end }}
+<script>
+  function copyToClipboard(text) {
+	navigator.clipboard.writeText(text).then(function() {
+	  alert('Copied to clipboard');
+	}, function(err) {
+	  console.error('Could not copy text: ', err);
+	});
+  }
+</script>

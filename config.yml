@@ -1,0 +1,30 @@
+module:
+  hugoVersion:
+    min: "0.130.0"
+  mounts:
+    - source: data
+      target: data
+    - source: layouts
+      target: layouts
+    - source: static
+      target: static
+outputFormats:
+  help:
+    basename: help/index
+    mediatype: text/html
+    notAlternative: false
+    isHTML: true
+  scms_debug:
+    baseName: config
+    isPlainText: true
+    mediatype: text/html
+    notAlternative: false
+  scms_config:
+    baseName: config
+    isPlainText: true
+    mediatype: application/yaml
+    notAlternative: false
+mediaTypes:
+  application/yaml:
+    suffixes:
+    - yml

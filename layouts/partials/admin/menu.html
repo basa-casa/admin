@@ -1,0 +1,7 @@
+        {{ range .Site.Menus.admin }}
+            <li style="display:inline;padding-top: 10px;padding-right: 20px;padding-bottom: 10px;">
+                <a href="{{ .URL }}" title="{{ .Title }}">
+                {{- .Name -}}
+                </a>
+            </li>
+        {{ end }}

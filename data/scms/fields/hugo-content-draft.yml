@@ -1,0 +1,5 @@
+name: draft
+label: Draft
+widget: boolean
+field_type: boolean
+required: false

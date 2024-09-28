@@ -1,0 +1,9 @@
+<span style="float:right;">Help: 
+    {{ range .Site.Menus.adminHelp }}
+    <li style="display:inline;padding-top: 10px;padding-right: 20px;padding-bottom: 10px;">
+        <a href="{{ .URL }}help/" title="{{ .Title }} help">
+        {{- .Name -}}
+        </a>
+    </li>
+{{ end }}
+</span>

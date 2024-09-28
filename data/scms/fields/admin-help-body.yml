@@ -1,0 +1,8 @@
+name: body
+label: Help
+slug: admin-help-body
+widget: markdown
+field_type: markdown
+required: false
+hint: >
+  This field writes to the Markdown body of this CMS' (_)index.md file. HTML will print to .Content at /admin/help/index.html. Use it to document the admin page for your site. 

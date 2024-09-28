@@ -1,0 +1,22 @@
+name: admin-help
+# Netlify CMS Folder Collection. See https://www.decapcms.org/docs/collection-types#folder-collections
+description: Help page editor for Admin Pages. Edits the body field for each content/admin/title/index.md file. They deploy to the site at `/admin/{.Title}/help`.
+label: Admin Help Pages
+label_singular: Admin Help Page
+collection_type: folder
+folder: content/admin
+identifier_field: title
+path: "{{slug}}/index"
+format: yaml-frontmatter
+fields:
+  - import: field admin-title
+    field_type: import
+    extend:
+      hint: Changes the name of the CMS
+  - import: field admin-help-body
+    field_type: import
+    extend:
+      label: Help
+create: false
+delete: false
+hide: false

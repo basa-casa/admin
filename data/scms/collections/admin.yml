@@ -1,0 +1,17 @@
+name: admin
+description: Edits the admin page for your site.
+label: admin/_index.md
+collection_type: files
+files:
+  - file: content/admin/_index.md
+    name: admin
+    label: Admin
+    fields:
+      - import: field admin-title
+        field_type: import
+      - import: field admin-cms
+        field_type: import  
+      - import: field admin-collections-import
+        field_type: import
+      - import: field admin-help-body
+        field_type: import

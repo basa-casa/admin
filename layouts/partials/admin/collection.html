@@ -1,0 +1,16 @@
+<dl>{{.label }}</dl>
+{{ $files := readDir "assets/data/scms/collections" }}
+<table>
+  {{ range $file := $files }}
+	{{ $content := readFile (printf "assets/data/scms/collections/%s" $file.Name) | transform.Unmarshal }}
+	<tr>
+	  <td>{{ $content.label }}</td>
+	  <td>-import: collection {{ $content.name }}</td>
+	  <td><a href="{{ $content.publishedFileUrl }}">Published File</a></td>
+	  <td><a href="#" onclick="copyToClipboard('cp _vendor/github/basa-casa/admin/data/scms/collections/{{ $content.file }}')">Copy from _vendor</a></td>
+	</tr>
+	<tr>
+	  <td colspan="4">{{ $content.description }}</td>
+	</tr>
+  {{ end }}
+</table>
