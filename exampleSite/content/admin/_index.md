@@ -25,7 +25,7 @@ cascade:
     public_folder: img
     site_url: ../../
     display_url: /
-    logo_url: "/img/hugo-admin.png"
+    logo_url: "/img/admin.png"
 draft: false
 ---
 Welcome to `/admin/help`!
