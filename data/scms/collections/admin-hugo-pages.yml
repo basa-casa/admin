@@ -1,5 +1,5 @@
 name: admin-pages
-description: Generates an instance of StaticCMS (scms), at `/admin/{{slug}}` Use this collection to override the module-provided pages admin/content, admin/config, etc.
+description: Generates an admin CMS, at `/admin/{{slug}}`. Pages copied from admin exampleSite/content/admin/{{slug}}/index.md will appear here.
 label: Admin Pages
 label_singular: Admin Page
 collection_type: folder
