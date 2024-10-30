@@ -33,4 +33,6 @@ Admin can be extended to support any other static site generator or text-file-co
 
 This is your blank slate! Most small sites will likely want all of their collections imported here. 
 
-More docs to come!
+## Prompt for Updating config.schema.json:
+
+> Please review and update the config.schema.json file for our CMS configuration. Ensure the schema includes all relevant JSON Schema options for each property, such as type, enum, pattern, description, default, and examples. Cross-reference the latest documentation from decap-cms and sveltia-cms repositories to include any new properties or changes. Ensure the schema is comprehensive, accurate, and follows best practices for JSON Schema.

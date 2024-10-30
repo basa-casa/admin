@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/basa-casa/admin-scms/refs/heads/main/assets/schemas/adminPage.schema.json",
+  "title": "Admin Hugo Pages Collection",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The title of the page."
+    },
+    "cms": {
+      "type": "string",
+      "const": "https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js",
+      "default": "https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js",
+      "description": "The CMS field for the admin page. Selects the javascript imported to head."
+    },
+    "collections": {
+      "type": "array",
+      "description": "Collections imported to the CMS",
+      "items": {
+        "anyOf": [
+          {
+            "type":"object",
+            "properties": {
+              "import": {
+              "type": "string",
+              "description": "_collection name_ will import the `/data/scms/collections/name.yml` file",
+              "pattern": "^[\\w]+\\s[\\w]+$"
+              },
+              "collectionType": {"const": "import"}
+            }
+          },
+          {
+            "$ref": "https://raw.githubusercontent.com/basa-casa/admin-scms/refs/heads/main/assets/schemas/collection.schema.json"
+          }
+        ]
+      }
+    },
+    "menu": {
+      "type": "string",
+      "description": "The content menu field for the admin page."
+    },
+    "draft": {
+      "type": "boolean",
+      "description": "Whether the content is a draft."
+    }
+  },
+  "required": ["title", "cms", "collections"]
+}

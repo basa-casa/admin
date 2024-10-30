@@ -8,12 +8,14 @@ module:
       target: layouts
     - source: static
       target: static
+uglyURLs: true
 outputFormats:
   help:
     basename: help/index
     mediatype: text/html
     notAlternative: false
     isHTML: true
+    noUgly: true
   scms_debug:
     baseName: config
     isPlainText: true
@@ -21,6 +23,11 @@ outputFormats:
     notAlternative: false
   scms_config:
     baseName: config
+    isPlainText: true
+    mediatype: application/yaml
+    notAlternative: false
+  scms_field:
+    baseName: index
     isPlainText: true
     mediatype: application/yaml
     notAlternative: false

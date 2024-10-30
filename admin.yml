@@ -1,0 +1,3 @@
+title: Admin itself
+schemas:
+  - src/schemas/*.json

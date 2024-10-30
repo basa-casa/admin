@@ -1,0 +1,6 @@
+{{ $return := "" }}
+{{ with .Params.field }}
+  {{ $parsedField := transform.Unmarshal "json" . }}
+  {{ $return = transform.Remarshal "yaml" $parsedField }}
+{{ end }}
+{{ return $return }}
