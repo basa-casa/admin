@@ -8,8 +8,11 @@ module:
       target: layouts
     - source: static
       target: static
+    - source: src/schemas
+      target: assets/schemas
 uglyURLs: true
 outputFormats:
+  _merge: deep
   help:
     basename: help/index
     mediatype: text/html

@@ -1,5 +1,5 @@
-label: CMS
-name: CMS
+label: cms
+name: cms
 widget: string
 field_type: string
 hint: URL of javascript CMS imported to <script src="{{ .Params.CMS }}"></script>
